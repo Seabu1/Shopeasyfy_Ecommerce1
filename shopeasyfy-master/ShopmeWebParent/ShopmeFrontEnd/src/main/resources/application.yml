@@ -1,0 +1,36 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /Shopeasyfy
+spring:
+  datasource:
+    password: 
+    url: jdbc:mysql://localhost:3306/shopeasyfydb
+    username: root    #hikari:      #minimum-idle: 1
+      #maximum-pool-size: 2
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+    show-sql: false
+    
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 182557182495-4ojqb7gpdf0cee6i97md5b3tns5sbc1e.apps.googleusercontent.com
+            client-secret: zpJMafs7JAf4fNVLZirNcRnO
+            scope:
+            - email
+            - profile
+          facebook:
+            client-id: 1528130607724062
+            client-secret: b361cc4408cdc887cb032d354f07212d
+
+            scope:
+            - email
+            - public_profile
